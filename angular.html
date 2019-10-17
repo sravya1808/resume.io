@@ -1,0 +1,81 @@
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+body{
+background-color:lightblue;
+}
+.ter{
+font-size:1.5em;
+}
+</style>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h1> {{firstName + " " + lastName}} </h1>
+<hr>
+<div class="ter">
+ <strong> Address: </strong>
+{{addr}}
+<br>
+<strong> Contact No: </strong>
+{{num}}
+<br>
+<strong> Qualifications: </strong>
+{{qual1}}
+<br>
+{{qual2}}
+<br>
+{{qual3}}
+<br>
+<hr>
+<strong> Skill Set: </strong>
+{{skills}}
+<br>
+<strong> Projects Undertaken: </strong>
+<strong> {{proj1}} </strong> <br>
+{{proj2}}
+<br>
+<strong> {{proj3}}</strong>
+<br>
+{{proj4}}
+{{proj5}}
+{{proj6}}
+<hr>
+<strong> Personal Information:</strong>
+<br>
+<strong> Date of Birth: </strong> {{dob}} <br>
+<strong> Father Name:</strong>{{dad}} <br>
+<strong> Languages Known: </strong> {{lan}}
+<hr>
+<strong> Declaration: </strong> {{dec}}
+</div>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+  $scope.firstName = "Sravya";
+  $scope.lastName = "Pachipulusu";
+  $scope.addr="Thirumala palace,sindhu block,flot no:207";
+  $scope.num="9849657303";
+  $scope.qual1="1.Pursuing Btech Computer Engineering in VIT-AP University";
+  $scope.qual2="2.Intermediate in FIITJEE";
+  $scope.qual3="3.SSC in Tiny Tots";
+  $scope.skills="Efficient in Programming languages like c,c++,Java,Matlab";
+  $scope.proj1="1.Arduino based Wireless remote control car.";
+  $scope.proj2=" Face recognition system using Raspberry pi.";
+ $scope.dob="18-08-2000";
+ $scope.dad="Pachipulusu Satish Kumar";
+ $scope.lan="Telugu, Hindi, English";
+ $scope.dec="I hereby declare that the above information is true according to my knowledge. ";                            
+})                    
+                              
+</script>
+
+
+
+
+</body>
+</html>
